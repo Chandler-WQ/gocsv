@@ -5,13 +5,13 @@ The GoCSV package aims to provide easy serialization and deserialization functio
 
 API and techniques inspired from https://godoc.org/gopkg.in/mgo.v2
 
-[![GoDoc](https://godoc.org/github.com/gocarina/gocsv?status.png)](https://godoc.org/github.com/gocarina/gocsv)
+[![GoDoc](https://godoc.org/github.com/Chandler-WQ/gocsv?status.png)](https://godoc.org/github.com/gocarina/gocsv)
 [![Build Status](https://travis-ci.org/gocarina/gocsv.svg?branch=master)](https://travis-ci.org/gocarina/gocsv)
 
 Installation
 =====
 
-```go get -u github.com/gocarina/gocsv```
+```go get -u github.com/Chandler-WQ/gocsv```
 
 Full example
 =====
@@ -38,7 +38,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/gocarina/gocsv"
+	"github.com/Chandler-WQ/gocsv"
 )
 
 type Client struct { // Our example struct, you can use "-" to ignore a field
