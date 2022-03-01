@@ -281,9 +281,7 @@ func readEach(decoder SimpleDecoder, c interface{}) error {
 	i := 0
 	for {
 		line, err := decoder.getCSVRow()
-		if err == io.EOF {
-			break
-		} else if err != nil {
+		if err != nil {
 			return err
 		}
 		outInner := createNewOutInner(outInnerWasPointer, outInnerType)
