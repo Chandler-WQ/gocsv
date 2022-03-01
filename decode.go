@@ -240,7 +240,7 @@ func readEach(decoder SimpleDecoder, c interface{}) error {
 	if outType.Kind() != reflect.Chan {
 		return fmt.Errorf("cannot use %v with type %s, only channel supported", c, outType)
 	}
-	// defer outValue.Close()
+	defer outValue.Close()
 
 	headers, err := decoder.getCSVRow()
 	if err != nil {
@@ -281,9 +281,7 @@ func readEach(decoder SimpleDecoder, c interface{}) error {
 	i := 0
 	for {
 		line, err := decoder.getCSVRow()
-		if err == io.EOF {
-			return err
-		} else if err != nil {
+		if err != nil {
 			return err
 		}
 		outInner := createNewOutInner(outInnerWasPointer, outInnerType)
